@@ -1,0 +1,13 @@
+[project]
+name = "fashion-epoch-detection"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=6.3.0",
+    "ollama>=0.6.3",
+    "pandas>=3.1.0",
+    "tqdm>=4.70.1",
+    "vl-convert-python>=1.9.0.post1",
+]
