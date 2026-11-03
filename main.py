@@ -37,7 +37,8 @@ def extract_frames(path_in, path_out):
     subprocess.call([
         'ffmpeg',
         '-i', str(path_in),
-        '-vf', 'fps=1',
+        #'-vf', 'fps=1', # one frame per second.
+        '-vf', 'scale=-2:720,fps=1/60', # one frame per minute.
         '-q:v', '2',
         f'{str(path_out)}/output_%04d.jpg'],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
@@ -110,7 +111,7 @@ accepted_responses = [
 # parse incoming media files.
 
 media_folder = pathlib.Path.cwd() / 'media'
-media_files = [x for x in media_folder.iterdir() if x.suffix in ['.mp4']]
+media_files = [x for x in media_folder.iterdir() if x.suffix in ['.mp4', '.webm']]
 for x in media_files:
 
     # use generated hash to route working folder.
