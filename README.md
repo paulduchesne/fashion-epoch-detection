@@ -12,29 +12,33 @@ The prompt to Ollama is specifically requesting that the film is dated based on 
 
 **Examples**
 
-
 [L'Arrivée d'un train en gare de La Ciotat](https://en.wikipedia.org/wiki/L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat) [1895]
-
-Lumiere film of passengers boarding a train. Worth noting that almost every frame features a human being in regular clothing, hence the high confidence score.
 
 ![](report/ca453ca217d214016f984d4a6f48465f.png)       
 
+[Le Retour à la raison](https://en.wikipedia.org/wiki/Le_Retour_%C3%A0_la_raison) [1923]
 
+![](report/611cb81ea2fbc2525e6627e5d3cbd3f7.png)
 
 [Der letzte Mann](https://en.wikipedia.org/wiki/The_Last_Laugh_(1924_film)) [1924]
 
-Less confidence could be due to shots in which human dress is obscured or not present. What is discernable is ballpark accurate.
-
 ![](report/be59b7913b61fa0118614a823fcc0925.png)
-
-
-
 
 [Metropolis](https://en.wikipedia.org/wiki/Metropolis_(1927_film)) [1927]
 
-Least confident, likely owing to being a science fiction vision of the future. While some of the costuming (Maria, the executives) would be accurate for the time, a lot else is a projection of imagined future fashion.
 ![](report/618b27d1fe42ebe32d7d8519105860c5.png)
 
+[Menschen am Sonntag](https://en.wikipedia.org/wiki/People_on_Sunday) [1930]
+
+![](report/f3eca16b406b7b9e7147808571465e37.png)
+
+[The World Before Your Feet](https://en.wikipedia.org/wiki/The_World_Before_Your_Feet) [2018]
+
+![](report/42fab904d9669567351d9fc38dc0f6e5.png)
+
+`L'Arrivée d'un train en gare de La Ciotat` and `The World Before Your Feet` return strong results, likely assisted by visible clothing appearing in a large percentage of both films. `Le Retour à la raison` is also the expected result, as it is an abstract film in which no clothing is visible. `Der letzte Mann` and `Metropolis` are less successful, possibly owing to a large number of shots not featuring humans, and in the case of `Metropolis`, a mix of non-descipt "worker" uniforms and the imagined fashion of the future. 
+
+`Menschen am Sonntag` is the most interesting result, there is a high confidence that the film was shot in the 1940s, when in fact it was shot in 1929. It would be interesting to explore why specifically this result has occured.
 
 **Licence**
 
